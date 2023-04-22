@@ -17,11 +17,11 @@
 
 <body style="height: 100vh; text-align: center; background-color: black; color: white; display: flex; flex-direction: column; justify-content: center;">
     <?php
-    // ini_set('max_execution_time', 5);
-    // if ($_COOKIE['password'] !== getenv('PASSWORD')) {
-    //     setcookie('password', 'PASSWORD');
-    //     die('Sorry, only people from csivit are allowed to access this page.');
-    // }
+    ini_set('max_execution_time', 5);
+    if ($_COOKIE['password'] !== getenv('PASSWORD')) {
+        setcookie('password', 'PASSWORD');
+        die('Sorry, only admin allowed to access this page.');
+    }
     ?>
 
     <h1>Character Count as a Service</h1>
